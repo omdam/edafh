@@ -1,0 +1,41 @@
+.password-group-om {
+    position: relative;
+
+    .input-om {
+        padding-inline-end: 40px;
+    }
+
+    .show-password-button-om {
+        position   : absolute;
+        top        : 0;
+        right      : 0;
+        height     : 49px;
+        display    : flex;
+        align-items: center;
+        outline    : none;
+        width      : 34px;
+        padding    : 0;
+        background : transparent;
+        border     : none;
+        cursor     : pointer;
+
+        @include dir {
+            right: unset;
+            left: 0;
+        }
+        &:focus {
+            outline: none;
+        }
+
+
+        &.show-om {
+            .eye-path-cl-om {
+                stroke: $color_2 !important;
+            }
+
+            .ss-line-through-om {
+                display: none !important;
+            }
+        } 
+    }
+}

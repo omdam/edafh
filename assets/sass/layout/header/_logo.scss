@@ -1,0 +1,21 @@
+
+.header-logo-om {
+    margin-inline-end: 30px;
+
+    @include xs {
+        margin-inline-end: 0;
+        margin-bottom: 10px;
+    }
+
+    .figure-om {
+        width : 142px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        
+        img {
+            width     : 100%;
+            object-fit: contain;
+        }
+    }
+}

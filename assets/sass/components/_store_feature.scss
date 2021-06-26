@@ -1,0 +1,42 @@
+.h-store-feature-om {
+    display         : flex;
+    align-items     : center;
+    padding         : 29.7px;
+    background-color: #fff;
+    margin-bottom   : 25px;
+
+    @include sm {
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .figure-om {
+        width            : 53px;
+        height           : 53px;
+        display          : flex;
+        align-items      : center;
+        justify-content  : center;
+        margin-inline-end: 15px;
+
+        .img-om {
+            max-width : 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .feature-desc-om {
+        .title-om {
+            font-size    : 14px;
+            font-weight  : 500; 
+            font-style   : normal;
+            color        : $h_color_1;
+            margin-bottom: 8.7px;
+        }
+
+        .parg-om {
+            font-size    : 12px;
+            color        : $p_color_2;
+            margin-bottom: 0;
+        }
+    }
+}

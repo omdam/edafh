@@ -1,0 +1,247 @@
+.product-block-om {
+    display      : block;
+    margin-bottom: 24px;
+
+    // img block 
+    .product-img-block {
+        position     : relative;
+        overflow     : hidden;
+        margin-bottom: 12px;
+
+        .img-block-om {
+            display: block;
+        }
+
+        .figure-om {
+            // height          : 215px;
+            background-color: #f4f4f4;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            padding-bottom  : 100%;
+
+            .img-om {
+                max-width : 90%;
+                max-height: 90%;
+                object-fit: contain;
+                width     : auto;
+                height    : auto;
+                right     : unset;
+                left      : unset;
+                top       : 50%;
+                left      : 50%;
+                transform : translate(-50%, -50%);
+            }
+        }
+
+        .show-fast-butt-om {
+            position        : absolute;
+            bottom          : -50px;
+            left            : 0;
+            width           : 100%;
+            display         : flex;
+            justify-content : center;
+            align-items     : center;
+            background-color: $color_2;
+            border          : none;
+            color           : #fff;
+            font-size       : 14px;
+            font-weight     : normal;
+            font-style      : normal;
+            padding         : 11.3px 10px;
+            outline         : none;
+            cursor          : pointer;
+            transition      : 0.5s;
+
+            &:hover {
+                background-color: rgba($color_2, 0.9)
+            }
+        }
+
+        .product-discout-om {
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            height          : 23px;
+            padding         : 0 10px;
+            font-size       : 12px;
+            font-weight     : normal;
+            font-stretch    : normal;
+            font-style      : normal;
+            position        : absolute;
+            right           : 10px;
+            top             : 10px;
+            background-color: $h_color_1;
+            color           : #fff;
+            direction       : ltr;
+
+            @include dir {
+                right: unset;
+                left : 10px;
+            }
+        }
+
+        .cart-fav-block {
+            position  : absolute;
+            top       : 10px;
+            left      : 10px;
+            transition: 0.5s;
+            opacity   : 0;
+            transform : scale(1);
+
+            @include dir {
+                left : unset;
+                right: 10px;
+            }
+
+            .butt-om {
+                width           : 35px;
+                height          : 35px;
+                display         : flex;
+                align-items     : center;
+                justify-content : center;
+                margin          : 0;
+                background-color: #fff;
+                border-radius   : 50%;
+                transition      : 0.5s;
+
+                &.fav-butt-om {
+                    background-color: $color_2;
+
+                    .fav-svg {
+                        fill      : none;
+                        stroke    : #fff;
+                        transition: fill .5s ease;
+                    }
+
+                    &:hover {
+                        background-color: rgba($color_2, 0.9);
+
+                        .fav-svg {
+                            fill      : #fff;
+                            transition: fill .5s ease;
+                        }
+                    }
+
+                    &.favorite-product-active-om {
+                        .fav-svg {
+                            fill: #fff;
+                        }
+                    }
+                }
+
+                &.cart-butt-om {
+                    margin-top: 10px;
+
+                    .svg-cart {
+                        fill  : none;
+                        stroke: $h_color_1;
+                    }
+
+                    &:hover {
+                        background-color: $color_2;
+                        border-color    : $color_2;
+
+                        .svg-cart {
+                            // fill: #fff;
+                            stroke: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // product desc 
+    .product-desc-om {
+        display: block;
+    }
+
+    // product-titile
+    .product-titile-om {
+        font-size    : 14px;
+        color        : $h_color_2;
+        margin-top   : 0;
+        margin-bottom: 10px;
+        line-height  : 1.71;
+        // width        : 93%;
+        height       : 46px;
+        overflow     : hidden;
+        transition: 0.5s;
+
+        &:hover {
+            color: $color_2;
+        }
+    }
+
+    // product-prices
+    .product-prices-om {
+        display      : flex;
+        align-items  : center;
+        margin-bottom: 10px;
+
+        .price-om {
+            font-size   : 18px;
+            font-weight : 500;
+            font-stretch: normal;
+            font-style  : normal;
+            color       : $h_color_2;
+
+            &.old-price-om {
+                margin-inline-start: 6px;
+                color              : $p_color_2;
+                text-decoration    : line-through;
+            }
+        }
+    }
+
+    // product-rate
+    .product-rate-om {
+        display    : flex;
+        align-items: center;
+
+        .figure-om {
+            // height: 35px;
+        }
+
+        .rate-text-om {
+            margin             : 0;
+            padding            : 0;
+            font-size          : 12px;
+            color              : #f7c51e;
+            margin-inline-start: 6px;
+
+            &.rate-nums-users-om {
+                color: $p_color_2;
+            }
+        }
+
+
+    }
+
+    // hover 
+    &:hover {
+
+        // img block 
+        .product-img-block {
+            .figure-om {
+                .img-om  {
+                    transform: translate(-50%, -50%) scale(1.1);
+                }
+                img {
+                    transform: scale(1.1);
+
+                }
+            }
+
+            .show-fast-butt-om {
+                bottom: 0;
+            }
+
+            .cart-fav-block {
+                opacity  : 1;
+                transform: scale(1);
+            }
+        }
+    }
+}

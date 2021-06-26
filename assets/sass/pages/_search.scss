@@ -1,0 +1,41 @@
+.search-page-section-om {
+    padding-bottom: 90px;
+}
+
+// list-grid-om products 
+
+.row-om {
+    &.list-grid-om {
+        display: block;
+        margin : 0;
+
+
+        @include sm {
+            margin: 0;
+        }
+
+        .col-om {
+            padding: 0;
+            width  : 100%;
+
+            @include sm {
+                width: 100%;
+            }
+        }
+
+
+        // products
+        .product-block-om {
+            display      : flex;
+            align-items  : center;
+            margin-bottom: 20px;
+        
+
+            .product-img-block {
+                width            : 200px;
+                margin-inline-end: 20px;
+                flex-shrink: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.submit-butt-om {
+    border-radius  : 2px;
+    color          : #fff;
+    background     : $color_2;
+    border         : 1px solid $color_2;
+    justify-content: center;
+    height         : 48px;
+    width          : 100%;
+    cursor         : pointer;
+    font-size      : 14px;
+    font-weight    : 500;
+    transition     : 0.5s;
+    margin-bottom  : 15px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    outline: none;
+
+    &:hover , &:focus {
+        background-color: rgba($color_2, 0.9);
+        border-color    : rgba($color_2, 0.9);
+        color           : #fff;
+        outline: none;
+    }
+}

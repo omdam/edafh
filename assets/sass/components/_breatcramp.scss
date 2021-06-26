@@ -1,0 +1,71 @@
+.breatcramp-section-om {
+    background-color: #fff;
+    padding         : 18px 0 10px;
+    margin-bottom   : 35px;
+    margin-top      : -20px;
+
+    .main-page-heading-om {
+        font-size    : 20px;
+        font-weight  : 500;
+        color        : $h_color_2;
+        margin-bottom: 11px;
+        display: flex;
+        align-items: center;
+        .sub-om {
+            color      : #a0a8b7;
+            font-weight: normal;
+            font-size  : 16px;
+            margin-inline-start: 5px;
+        }
+    }
+}
+
+.breatcramp-om {
+    display: flex;
+
+    .li-om {
+        padding-bottom: 8px;
+
+        &:not(:last-child) {
+
+            &::after {
+                content            : url(../images/next.svg);
+                margin-inline-start: 12px;
+                transform          : rotateY(180deg);
+                display            : inline-flex;
+
+                @include dir {
+                    transform: none;
+                }
+            }
+        }
+
+        &:not(:first-child) {
+            &::before {
+                content          : url(../images/next.svg);
+                transform        : rotateY(180deg);
+                margin-inline-end: 12px;
+                display          : inline-flex;
+
+                @include dir {
+                    transform: none;
+                }
+            }
+        }
+
+        .link-om {
+            font-size  : 14px;
+            font-weight: 500;
+            color      : $h_color_2;
+
+            &:hover,
+            &.current-om {
+                color: $color_2;
+            }
+
+            &.current-om {
+                pointer-events: none;
+            }
+        }
+    }
+}

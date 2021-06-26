@@ -1,0 +1,43 @@
+.footer-social-om {
+    display    : flex;
+    align-items: center;
+
+    @include sm {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .li-om {
+        &:not(:last-child) {
+            margin-inline-end: 10px;
+        }
+    }
+
+    .link-om {
+        width              : 36px;
+        height             : 36px;
+        display            : flex;
+        justify-content    : center;
+        align-items        : center;
+        // background-color: $color_2;
+        border             : 1px solid #3b3e43;
+        color              : #fff;
+        border-radius      : 50%;
+        padding            : 5px;
+        transition         : 0.5s;
+
+        &:hover {
+
+            background-color: $color_2;
+            border-color    : $color_2;
+        }
+
+        .figure-om {
+            display        : inline-flex;
+            justify-content: center;
+            align-items    : center;
+        }
+
+        // .img-om {}
+    }
+}

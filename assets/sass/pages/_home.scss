@@ -1,0 +1,104 @@
+.main-slider-om {
+    margin-bottom: 29px;
+
+    .figure-om {
+        padding-bottom: 18.626%;
+
+    }
+}
+
+
+.h-store-features-om {
+    // padding-top: 25px;
+
+    @include sm {
+        padding: 20px 0 5px;
+
+    }
+}
+
+.h-top-categories-om {
+    margin-bottom: 20px;
+
+    .section-wraper-om {
+        padding: 20px 15px 15px;
+    }
+}
+
+.first-banners-sec-om {
+    .row-om {
+        .col-om {
+            width: calc(100% / 2);
+
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.h-favorite-offers-om {
+    margin-bottom: 20px;
+
+    .section-wraper-om {
+        padding-top   : 15px;
+        padding-bottom: 15px;
+    }
+}
+
+.second-banners-sec-om {
+
+    .row-om {
+        .col-om {
+            width: calc(100% / 3);
+
+            @include sm {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.h-choose-for-you-om {
+    margin-bottom: 20px;
+}
+
+.h-finest-brands-om {
+    margin-bottom: 20px;
+
+}
+
+.h-mobile-section-om {
+    margin-bottom: 20px;
+}
+
+.h-specials-offers-section {
+    margin-bottom: 25px;
+
+    .section-wraper-om {
+        padding-bottom: 0;
+    }
+
+    .site-head-block-om {
+        margin-bottom: 30px;
+    }
+
+    .row-om {
+        margin: 0 -20px;
+
+        @include sm {
+            margin: 0;
+        }
+
+        .col-om {
+            padding: 0 20px;
+            width  : calc(100% / 3);
+
+            @include sm {
+                width  : 100%;
+                padding: 0;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,305 @@
+// this only be for colors 
+@import 'abstracts/variables';
+
+// body {
+//     color: $p_color_1;
+// }
+
+// selection color
+::-moz-selection {
+    background: $color_1;
+}
+
+::selection {
+    background: $color_1;
+}
+
+// scroll bar
+@media only screen and (min-width: 991px) {
+
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $color_1;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: $color_1;
+    }
+
+}
+
+// header logo sizes 
+.header-logo-om {
+    .figure-om {
+        width : 142px;
+        height: 36px;
+    }
+}
+
+.logo-search-personal-data-om,
+.toolbar-om {
+    background-color: $color_1;
+}
+
+.search-section-om {
+    .search-butt-om {
+        &:hover {
+            color: $color_2;
+        }
+    }
+}
+
+
+
+.all-categories-section {
+
+    .all-cats-butt-om {
+        &::after {
+
+            border-color: $color_1 transparent $color_1 transparent;
+
+        }
+    }
+}
+
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+
+    &.swiper-pagination-bullet-active {
+        background-color: $color_2;
+    }
+}
+
+
+.site-head-block-om {
+    &::after {
+        background-color: $color_2;
+    }
+
+    .show-more-link-om {
+        color: $color_2;
+
+        &:hover {
+            color: $color_1;
+        }
+    }
+}
+
+// swiper slider
+.swiper-button-next,
+.swiper-button-prev {
+
+    &:hover {
+        background-color: $color_2;
+    }
+}
+
+
+// product 
+.product-block-om {
+
+    // img block 
+    .product-img-block {
+
+        .show-fast-butt-om {
+
+            background-color: $color_2;
+
+            &:hover {
+                background-color: rgba($color_2, 0.9)
+            }
+        }
+
+        .cart-fav-block {
+            .butt-om {
+
+                &.fav-butt-om {
+                    background-color: $color_2;
+
+                    &:hover {
+                        background-color: rgba($color_2, 0.9);
+                    }
+
+
+                }
+
+                &.cart-butt-om {
+
+                    .svg-cart {
+                        stroke: $h_color_1;
+                    }
+
+                    &:hover {
+                        background-color: $color_2;
+                        border-color    : $color_2;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // product-titile
+    .product-titile-om {
+        &:hover {
+            color: $color_2;
+        }
+    }
+
+
+}
+
+
+.footer-help-om {
+    .title-om {
+        color: $color_2;
+    }
+
+}
+
+.footer-contact-info-om {
+    .footer-contact-block-om {
+
+        .figure-om {
+            background-color: $color_2;
+        }
+
+
+
+        &:hover {
+            .figure-om {
+                background-color: rgba($color_2, 0.9);
+            }
+        }
+    }
+
+}
+
+
+.footer-links-list-om {
+
+    .link-om {
+        &:hover {
+            color: $color_2;
+
+            &::after {
+                border-color: $color_2;
+            }
+        }
+    }
+}
+
+
+
+.footer-newsletter-block-om {
+    .newsletter-group-om {
+
+        .submit-butt-om {
+            background-color: $color_2;
+
+            &:hover {
+                background-color: rgba($color_2, 0.9);
+            }
+
+        }
+    }
+}
+
+.footer-social-om {
+    .link-om {
+        &:hover {
+
+            background-color: $color_2;
+            border-color    : $color_2;
+        }
+
+    }
+}
+
+.checkbox-group-om {
+    .checkbox-om {
+        &:checked {
+            +.checkbox-label-om {
+                background-color: $color_2;
+                border-color    : $color_2;
+            }
+        }
+    }
+
+}
+
+
+
+.radio-group-om {
+    .radio-om {
+        &:checked {
+            +.radio-label-om {
+                background-color: $color_2;
+                border-color    : $color_2;
+            }
+        }
+    }
+
+}
+
+.sp-filter-block-om {
+    .sp-filter-list-om {
+        .butt-om {
+
+            &:hover {
+                color: $color_2;
+            }
+
+            &.active {
+                color: $color_2;
+            }
+        }
+
+        .sp-sublist-om {
+            >.butt-om {
+                &:hover {
+                    color: $color_2 !important;
+                }
+            }
+
+            .butt-om {
+                &:hover {
+                    color: $color_2;
+                }
+
+                &.active {
+                    color: $color_2;
+                }
+            }
+        }
+    }
+
+}
+
+.sp-search-result-section-om {
+
+    .sp-search-result-list-om {
+        .sp-result-block-om {
+            .close-butt-om {
+
+                &:hover {
+                    &::after,
+                    &::before {
+
+                        background-color: $color_2;
+                    }
+                }
+            }
+        }
+    }
+
+    .remove-all-om {
+        color: $color_2;
+
+        &:hover {
+            color: rgba($color_2, 0.9);
+        }
+    }
+}
