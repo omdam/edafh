@@ -5,11 +5,25 @@
     display           : flex;
     align-items       : center;
 
+    @include sm {
+        padding-inline-end: 0;
+    }
+
     .nav-list-om {
         display      : flex;
         margin-bottom: 0;
 
+
+        @include sm {
+            display: block;
+            width: 100%;
+            padding: 0;
+        }
+
         >li {
+
+           
+           
 
             >a,
             >.link-om {
@@ -20,6 +34,16 @@
                 display    : flex;
                 align-items: center;
 
+                @include sm {
+                    padding: 12px 15px;
+                    border-bottom: 1px solid #e8e8e8;
+
+                    &:hover {
+                        background-color: #e8e8e8;
+                    }
+                }
+
+
                 &.discount-link-om {
                     color: #e61b42;
 
@@ -29,90 +53,13 @@
                     }
                 }
 
+              
+
                 &:hover {
-                    opacity: 0.7;
+                    // opacity: 0.7;
                 }
             }
 
         }
     }
 }
-
-// nav-om  -xs size
-// @include sm {
-//     .nav-om {
-//         position   : fixed;
-//         top        : 0;
-//         left       : -100%;
-//         background : $color_1;
-//         background : #384047;
-//         height     : 100%;
-//         width      : 90%;
-//         z-index    : 1111;
-//         padding    : 20px;
-//         transition : 0.5s;
-//         overflow-y : auto;
-//         display    : block;
-//         padding-top: 75px;
-
-//         @include dir {
-//             right: -100%;
-//             left : unset;
-//         }
-
-//         &.active-menu {
-//             left: 0;
-
-//             @include dir {
-//                 right: 0;
-//                 left : unset;
-//             }
-//         }
-
-//         // close button in base 
-
-//         .nav-list-om {
-//             display: block;
-//             order  : 3;
-//             width  : 100%;
-//             margin : 0;
-
-//             @include dir {
-//                 margin: 0;
-//             }
-
-//             >li {
-//                 margin-inline-end: 0;
-
-//                 &:not(:last-child) {
-//                     margin-inline-end: 0;
-//                 }
-
-//                 >a {
-//                     color  : #fff;
-//                     padding: 10px 25px;
-//                     display: block;
-//                     margin : 0;
-
-//                     @include dir {
-//                         margin: 0;
-//                     }
-
-//                     &:hover {
-//                         background-color: transparent
-//                     }
-//                 }
-
-//                 &:nth-child(odd) {
-//                     >a {
-//                         background-color: $color_1
-//                     }
-//                 }
-
-
-
-
-//             }
-//         }
-//     }
-// }

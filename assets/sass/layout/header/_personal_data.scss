@@ -22,6 +22,13 @@
             }
         }
 
+        &.menu-li-om {
+            display: none;
+
+            @include sm {
+                display: inline-flex;
+            }
+        }
 
     }
 

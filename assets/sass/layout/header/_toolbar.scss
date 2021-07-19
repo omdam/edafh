@@ -49,8 +49,6 @@
             font-weight  : normal;
             font-style   : normal;
 
-
-
             .figure-om {
                 margin-inline-end: 10px;
             }
@@ -74,14 +72,31 @@
         align-items: center;
 
         @include sm {
-            display: block;
+            // display: block;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .tt-lang-sec-om {
             display: inline-flex;
 
+            &::after {
+                content         : "";
+                display         : inline-flex;
+                width           : 1px;
+                height          : 26px;
+                margin          : 0 20px;
+                opacity         : 0.1;
+                background-color: #ffffff;
+
+                // @include sm {
+                //     content: none;
+                //     display: none;
+                // }
+            }
+
             @include sm {
-                display: none;
+                // display: none;
             }
 
 
@@ -98,30 +113,17 @@
                 }
             }
         }
-
+   
         .tt-social-om {
             display      : flex;
             align-items  : center;
             margin-bottom: 0;
 
-            &::before {
-                content         : "";
-                display         : inline-flex;
-                width           : 1px;
-                height          : 26px;
-                margin          : 0 20px;
-                opacity         : 0.1;
-                background-color: #ffffff;
+        
 
-                @include sm {
-                    content: none;
-                    display: none;
-                }
-            }
-
-            @include sm {
-                justify-content: center;
-            }
+            // @include sm {
+            //     justify-content: center;
+            // }
 
             .link-om {
                 transition: 0.5s;
@@ -143,6 +145,10 @@
                 }
 
             }
+        }
+
+        .tt-currency-sec-om {
+     
         }
     }
 }

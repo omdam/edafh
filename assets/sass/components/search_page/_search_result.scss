@@ -4,6 +4,7 @@
 
     @include sm {
         flex-direction: column;
+        // align-items   : flex-start;
     }
 
     .result-head-om {
@@ -15,6 +16,22 @@
 
         @include sm {
             margin-inline-end: 0;
+        }
+    }
+
+    .fliter-menu-butt {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        cursor         : pointer;
+        display: none;
+        
+        @include sm {
+            display: flex;
+        }
+
+        .figure-om {
+            margin-inline-end: 5px;
         }
     }
 
@@ -100,4 +117,3 @@
         }
     }
 }
-

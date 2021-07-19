@@ -1,36 +1,54 @@
 .nav-om .nav-list-om {
+    
     .li-mega-om {
         .ss-header-megamenu-om {
             display: none;
+
+            
+            @include sm {
+                display: none;
+            }
         }
-
-
 
         .link-om {
             position: relative;
 
-            &::after {
+            &::after,
+            &::before {
                 content     : "";
                 display     : none;
                 position    : absolute;
                 top         : 111%;
                 border-style: solid;
                 border-width: 0px 15px 15px 15px;
-                border-color: #fff transparent ;
+                border-color: #fff transparent;
                 left        : 50%;
                 transform   : translateX(-50%);
+                z-index     : 11111;
+            }
+            
+            &::before {
+                top         : 110%;
+                border-width: 0px 16px 16px 16px;
+                border-color: rgba(#e8e8e8,0.5) transparent;
+                
             }
         }
 
         &:hover {
             .ss-header-megamenu-om {
                 display: block;
+
+                @include sm {
+                    display: none;
+                }
             }
 
             .link-om {
 
-                &::after {
-                    display     : block;
+                &::after,
+                &::before {
+                    display: block;
                 }
             }
         }
@@ -52,7 +70,7 @@
         background-color: #fff;
         width           : 100%;
         padding-bottom  : 20px;
-        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.06);
+        box-shadow      : 0 3px 6px 0 rgba(0, 0, 0, 0.06);
 
         .mega-row-om {
             display: flex;

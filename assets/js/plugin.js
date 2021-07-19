@@ -318,22 +318,7 @@ jQuery(document).ready(function ($) {
     });
 
 
-    /********************************
-   * 
-   * categoreies list activation  *
-   * 
-   ********************************/
-
-    $(".header-categoreies-main-list-om .li-om").on("mouseenter", function (e) {
-        e.preventDefault();
-
-        $(".header-category-decsription-om").fadeIn().addClass("active-men-om");
-
-    })
-    $(".header-categoreies-mega-menu-om").on('mouseleave', function () {
-        $(".header-category-decsription-om").fadeOut().removeClass("active-men-om");
-    });
-
+  
 
     /********************************
    * 
@@ -400,17 +385,19 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    /********************************
-     * 
-     * footer colapsed in small sizes *
-     * 
-     ********************************/
-    //
+
     if ($(window).width() <= 991) {
+
+        /********************************
+        * 
+        *  colapsed in small sizes *
+        * 
+        ********************************/
         $('.collapse-head-om').on('click', function () {
 
-            $('.collapse-head-om').not(this).parent().find('.list-collapse-om').slideUp();
-            $(this).parent().find('.list-collapse-om').slideToggle({
+            // $('.collapse-head-om').not(this).parent().find('.list-collapse-om').slideUp();
+            // console.log($(this).parent().siblings().find('.list-collapse-om').slideUp());
+            $(this).parent().find('> .list-collapse-om').slideToggle({
                 queue: false,
                 complete: function () {
                     $(".list-collapse-om").each(function () {
@@ -424,6 +411,20 @@ jQuery(document).ready(function ($) {
             });
 
         });
+
+
+        /********************************
+              * 
+              *  colapsed in small sizes *
+              * 
+        ********************************/
+        $(".all-categories-section .all-cats-butt-om").on("click",function(e){
+            e.preventDefault();
+
+            $(this).parent().find(".header-categoreies-mega-menu-om").slideToggle();
+        })
+
+   
     }
 
 
@@ -437,15 +438,15 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
 
         $("#navbar-menu-om").addClass("active-menu");
-        $(".overlay").addClass("active");
+        $("#navbar-overlay-om").addClass("active");
         $("body").addClass("overflow-body");
     });
 
     // nav men close 
-    $(".close-butt-om , .overlay ").on("click", function (e) {
+    $("#navbar-close-butt-om , #navbar-overlay-om ").on("click", function (e) {
         e.preventDefault();
         $("#navbar-menu-om").removeClass("active-menu");
-        $(".overlay").removeClass("active");
+        $("#navbar-overlay-om").removeClass("active");
 
         $("body").removeClass("overflow-body");
 
@@ -522,6 +523,7 @@ jQuery(document).ready(function ($) {
         $(this).parent().remove();
     });
 
+    
 
     /********************************
      * 
@@ -542,6 +544,27 @@ jQuery(document).ready(function ($) {
             $("#spp_change_layout_om").addClass("list-grid-om");
         }
 
+    });
+
+     /********************************
+     * 
+     * search page  - menu filter in small sizes *
+     * 
+     ********************************/
+    $("#search-fliter-menu-butt-activ-om").on("click", function(e) {
+        e.preventDefault();
+
+        $("#search-fliter-menu-om").addClass("active-menu");
+        $("#search-fliter-overlay-om").addClass("active");
+        $("body").addClass("overflow-body");
+    });
+
+    $("#search-fliter-overlay-om , #search-fliter-close-butt-om").on("click", function(e) {
+        e.preventDefault();
+
+        $("#search-fliter-menu-om").removeClass("active-menu");
+        $("#search-fliter-overlay-om").removeClass("active");
+        $("body").removeClass("overflow-body");
     });
 
 
@@ -565,13 +588,13 @@ jQuery(document).ready(function ($) {
         },
     });
 
-      /********************************
-     * 
-     * single product page  - triger tab button *
-     * 
-     ********************************/
+    /********************************
+   * 
+   * single product page  - triger tab button *
+   * 
+   ********************************/
 
-    $("#show_allspecs_triger_tab_om").on("click",function(e){
+    $("#show_allspecs_triger_tab_om").on("click", function (e) {
         e.preventDefault();
 
         $("#product-specifications-tab").trigger("click")

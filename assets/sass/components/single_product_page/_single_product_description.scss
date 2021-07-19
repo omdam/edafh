@@ -250,7 +250,7 @@
             height         : 30px;
             margin         : 0;
             padding        : 0;
-            border-radius  : 4px;
+            border-radius  : 50%;
             border         : solid 1px transparent;
             align-items    : center;
             justify-content: center;
@@ -288,7 +288,6 @@
 .product-quantity-list-om {
 
     display: flex;
-
     flex-wrap: wrap;
 
     .li-om {
@@ -306,6 +305,11 @@
 
             min-width: 75px;
         }
+    }
+    
+    .input-om {
+        width: 100px;
+        margin-bottom: 0;
     }
 
     .add-to-cart-button {
